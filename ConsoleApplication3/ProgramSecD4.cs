@@ -16,15 +16,15 @@ namespace ConsoleApplication3
 
             while (!yourg)
             {
-                if ((G * G) == N)
+                if (((G * G) - N ) <= 0.00001)
                 {
                     yourg = true;
-                    Console.WriteLine(G);
+                    Console.WriteLine("{0}", Math.Round(G, 3));
                 }
                 else
                 {
                     yourg = false;
-                    G = Math.Round(((G + N)/ G) / 2, 5);
+                    G = ((G + N / G) / 2);
                 }
 
             }
